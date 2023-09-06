@@ -1,0 +1,35 @@
+# Definir la matriz bidimensional
+matriz = [
+    [9, 4, 7],
+    [2, 5, 1],
+    [6, 8, 3]
+]
+
+# Función para ordenar una fila en la matriz usando Selection Sort
+def ordenar_fila(matriz, fila):
+    if fila < 0 or fila >= len(matriz):
+        return None  # Fila fuera de rango
+
+    fila_a_ordenar = matriz[fila]
+    n = len(fila_a_ordenar)
+
+    for i in range(n - 1):
+        min_idx = i
+        for j in range(i + 1, n):
+            if fila_a_ordenar[j] < fila_a_ordenar[min_idx]:
+                min_idx = j
+        fila_a_ordenar[i], fila_a_ordenar[min_idx] = fila_a_ordenar[min_idx], fila_a_ordenar[i]
+
+# Mostrar la matriz original
+print("Matriz Original:")
+for fila in matriz:
+    print(fila)
+
+# Ordenar la fila 1 (recuerda que Python usa índices base 0)
+fila_a_ordenar = 1
+ordenar_fila(matriz, fila_a_ordenar)
+
+# Mostrar la matriz con la fila ordenada
+print("\nMatriz con Fila Ordenada:")
+for fila in matriz:
+    print(fila)
