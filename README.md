@@ -1,2 +1,2 @@
-# ProgramasPseint
-Ejemplos de Programas en Pseint
+# Areglos Multidimensionales 
+Ejemplos de Programas en Python
