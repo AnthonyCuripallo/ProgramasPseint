@@ -1,0 +1,20 @@
+def calcular_descuento(monto_total):
+    # Definir las reglas de descuento
+    if monto_total >= 1000:
+        descuento = 0.1  # 10% de descuento
+    elif monto_total >= 500:
+        descuento = 0.05  # 5% de descuento
+    else:
+        descuento = 0  # Sin descuento
+    
+    # Calcular el monto final
+    monto_final = monto_total - (monto_total * descuento)
+    
+    return monto_final
+
+# Solicitar al usuario el monto total de la compra
+monto_total = float(input("Ingrese el monto total de la compra: "))
+
+# Calcular y mostrar el monto final a pagar con descuento
+monto_final = calcular_descuento(monto_total)
+print("El monto final a pagar es:", monto_final)
