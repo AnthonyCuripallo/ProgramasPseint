@@ -1,0 +1,19 @@
+# Escritura de Archivo de Texto
+archivo = open("my_notes.txt", "w")  # Abre el archivo en modo escritura
+
+archivo.write("Mañana debo trabajar alas 7 am\n")  # Escribe la primera línea de notas
+archivo.write("Maria no realizo su tarea\n")  # Escribe la segunda línea de notas
+archivo.write("El dia de ayer me quede sin pasaje\n")  # Escribe la tercera línea de notas
+archivo.write("Josue es muy malcriado")  # Escribe la cuarta linea de notas 
+
+archivo.close()  # Cierra el archivo después de escribir las notas
+
+# Lectura de Archivo de Texto
+archivo = open("my_notes.txt", "r")  # Abre el archivo en modo lectura
+
+linea = archivo.readline()  # Lee la primera línea del archivo
+while linea != "":  # Mientras haya líneas por leer
+    print(linea)  # Muestra la línea en la consola
+    linea = archivo.readline()  # Lee la siguiente línea
+
+archivo.close()  # Cierra el archivo después de leer las notas
